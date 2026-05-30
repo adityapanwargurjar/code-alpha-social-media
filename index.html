@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Social Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>SocialMini</h1>
+    <div id="current-user-control">
+      Current User: 
+      <select id="user-selector" onchange="switchUser()">
+        <option value="1">Alice (ID: 1)</option>
+        <option value="2">Bob (ID: 2)</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="profile-card">
+      <h2>Profile View</h2>
+      <p><strong>Username:</strong> <span id="prof-username">-</span></p>
+      <p><strong>Bio:</strong> <span id="prof-bio">-</span></p>
+      <p><strong>Followers:</strong> <span id="prof-followers">0</span> | <strong>Following:</strong> <span id="prof-following">0</span></p>
+      <button id="follow-btn" onclick="toggleFollow()">Follow User</button>
+    </section>
+
+    <section class="feed-section">
+      <div class="create-post">
+        <h3>Create a Post</h3>
+        <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+        <button onclick="createPost()">Post</button>
+      </div>
+
+      <h2>Feed</h2>
+      <div id="feed"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
